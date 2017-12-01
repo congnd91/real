@@ -1,0 +1,52 @@
+<div class="banner">
+    <div class="container">
+        <h1>          {{feeds.title}}</h1>
+
+
+        <a href="#/profile/globus68">
+            <img src="https://static.productionready.io/images/smiley-cyrus.jpg">
+        </a>
+
+        <div class="info">
+            <a class="author" href="#/profile/globus68">
+                {{feeds.author.username}}
+            </a>
+            <span class="date">
+               {{feeds.createdAt}}
+            </span>
+        </div>
+
+
+
+        <span>
+            <a class="btn btn-sm btn-outline-secondary" href="#/editor/cool-6qttnn">
+                <i class="ion-edit"></i> Edit Article
+            </a>
+
+            <button class="btn btn-sm btn-outline-danger">
+                <i class="ion-trash-a"></i> Delete Article
+            </button>
+        </span>
+
+        <span>
+          
+                <button class="btn btn-sm action-btn btn-outline-secondary">
+                    <i class="ion-plus-round"></i>
+                    &nbsp; Follow {{feeds.author.username}}}
+                </button>
+
+      
+                <button class="btn btn-sm btn-outline-primary">
+                    <i class="ion-heart"></i>
+                    Favorite Article
+                    <span class="counter">({{feeds.favoritesCount}})</span>
+
+                </button>
+            
+        </span>
+
+
+    </div>
+
+
+</div>

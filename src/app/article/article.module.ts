@@ -2,15 +2,12 @@ import { ModuleWithProviders, NgModule } from '@angular/core';
 import { RouterModule,Routes } from '@angular/router';
 import {CommonModule} from '@angular/common';
 
-import { HomeComponent } from './home.component';
-import { ErrorComponent } from './error.component';
+import { ArticleComponent } from './article.component';
+
 import { BrowserModule } from '@angular/platform-browser';
 
 const homeRouting:Routes=[
-{path:'', component: HomeComponent}
-,
-{path:'#', component: HomeComponent},
-{path:'error',component: ErrorComponent}
+{path:'article/:id', component:ArticleComponent}
 
 ]
 
@@ -21,8 +18,8 @@ const homeRouting:Routes=[
      
     ],
     declarations: [
-      HomeComponent,ErrorComponent
+        ArticleComponent
     ],
     providers: []
   })
-  export class HomeModule {}
+  export class ArticleModule {}

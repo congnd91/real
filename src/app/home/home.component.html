@@ -1,2 +1,70 @@
+<div class="home-page">
+    <div class="banner">
+        <div class="container">
+            <h1 class="logo-font">conduit</h1>
+            <p>A place to share your
+                <i>Angular 2</i> knowledge.</p>
+        </div>
+    </div>
+    <div class="container page">
+        <div class="row">
 
-<h2>hthis is home</h2>
+            <div class="col-md-9">
+                <div class="feed-toggle">
+                    <ul class="nav nav-pills outline-active">
+                        <li class="nav-item">
+                            <a class="nav-link">
+                                Your Feed
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active">
+                                Global Feed
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active">
+                                <i class="ion-pound"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="article-preview" *ngFor="let feed of feeds">
+                    <div class="article-meta">
+                        <a href="#/profile/makigr">
+                            <img src="{{feed.author.image}}">
+                        </a>
+                        <div class="info">
+                            <a class="author" href="#/profile/makigr">
+                              {{feed.author.username}}
+                            </a>
+                            <span class="date">
+                                {{feed.author.createAt}}
+                            </span>
+                        </div>
+                        <div class="pull-xs-right">
+                            <button class="btn btn-sm btn-outline-primary">
+                                <i class="ion-heart"></i>
+                                {{feed.favoritesCount}}
+                            </button>
+                        </div>
+                    </div>
+                    <a class="preview-link" routerLink="/article/{{feed.slug}}">
+                        <h1> {{feed.title}}</h1>
+                        <p>{{feed.body}}</p>
+                        <span>Read more...</span>
+                        <ul class="tag-list">
+                            <li class="tag-default tag-pill tag-outline" *ngFor="let tag of feed.tagList">
+                                {{tag}}
+                            </li>
+                        </ul>
+                    </a>
+                </div>
+            </div>
+        <div class="col-md-3">
+        </div>
+    </div>
+</div>
+
+
+</div>

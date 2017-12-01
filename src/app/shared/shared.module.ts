@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
+import { FeedService } from './index';
 
 
 
@@ -16,6 +17,7 @@ import { RouterModule } from '@angular/router';
   ],
   exports: [
    
-  ]
+  ],
+
 })
 export class SharedModule {}
